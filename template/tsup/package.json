@@ -40,9 +40,9 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
-  "registry": "https://registry.npmjs.org/",
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@types/node": "^18.7.18",
