@@ -8,11 +8,11 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prepare": "simple-git-hooks",
     "dev": "tsup --watch",
     "build": "tsup --minify",
     "lint": "eslint --cache --ext ts,tsx,vue .",
-    "prepublishOnly": "build",
     "release": "npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
@@ -39,6 +39,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "registry": "https://registry.npmjs.org/",
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@types/node": "^18.7.18",
