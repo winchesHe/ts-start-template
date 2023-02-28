@@ -1,7 +1,7 @@
 {
   "name": "@winches/ts-start",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "winches",
   "license": "MIT",
@@ -46,16 +46,18 @@
     "access": "public"
   },
   "registry": "https://registry.npmjs.org/",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0",
+    "inquirer": "^9.1.4"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@types/fs-extra": "^11.0.1",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.7.18",
-    "commander": "^10.0.0",
     "eslint": "^8.23.1",
     "esno": "^0.16.3",
-    "fs-extra": "^11.1.0",
-    "inquirer": "^9.1.4",
     "lint-staged": "^13.1.2",
     "rimraf": "^4.1.2",
     "simple-git-hooks": "^2.8.1",
