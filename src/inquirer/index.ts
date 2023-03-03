@@ -1,10 +1,10 @@
+import { readdirSync } from 'fs'
 import inquirer from 'inquirer'
+import { excludeList } from '../constants'
+import { resolver } from '../utils'
 
 function getChoices() {
-  return [
-    'tsup',
-    'unbuild',
-  ]
+  return readdirSync(resolver('template')).filter(file => !excludeList.includes(file))
 }
 
 export const getName = async (): Promise<string> => {
@@ -21,7 +21,7 @@ export const getInquirer = async (): Promise<['tsup' | 'unbuild']> => {
   const pathName = {
     type: 'checkbox',
     name: 'template',
-    message: '请选中需要的打包工具: ',
+    message: '请选中需要的启动模版: ',
     choices: getChoices(),
     validate: (value: string[]) => {
       if (!value.length)
