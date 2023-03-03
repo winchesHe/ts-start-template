@@ -28,9 +28,10 @@ export async function start(options: { name?: string }) {
     name = await getName()
 
   const [buildTools] = await getInquirer()
-  const copyDistDir = (existsSync(resolve(dir, buildTools))
-    ? resolve(dir, buildTools)
-    : fg.sync(buildTools, { absolute: true, unique: true })[0])
+  const temBuildTools = `template/${buildTools}`
+  const copyDistDir = (existsSync(resolve(dir, temBuildTools))
+    ? resolve(dir, temBuildTools)
+    : fg.sync(buildTools, { absolute: true, unique: true, deep: 2 })[0])
       || resolve(root, `template/${buildTools}`)
 
   fs.copySync(copyDistDir, resolve(root, name))

@@ -7,5 +7,4 @@ export default defineConfig({
   dts: true,
   entry: ['src/bin.ts'],
   format: ['esm'],
-  publicDir: 'template',
 })
