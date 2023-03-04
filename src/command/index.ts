@@ -35,7 +35,11 @@ export async function start(options: { name?: string }) {
       || resolve(root, `template/${selectTem}`)
       || fg.sync(selectTem, { cwd: join(pkgDir, '../..'), absolute: true, unique: true, onlyDirectories: true })[0]
 
-  fs.copySync(copyDistDir, resolve(root, name))
+  fs.copySync(copyDistDir, resolve(root, name), {
+    filter() {
+      return true
+    },
+  })
 
   console.log()
   console.log(`Success: 成功写入模版${name}`)
