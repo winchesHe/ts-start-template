@@ -67,7 +67,6 @@
     "extends": [
       "@antfu",
       "@unocss"
-    ],
-    "root": true
+    ]
   }
 }
