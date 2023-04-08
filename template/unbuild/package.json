@@ -8,15 +8,10 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
-    "prepublishOnly": "nr build",
-    "prepare": "simple-git-hooks",
+    "prepublishOnly": "npm run build",
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint --cache --ext ts,tsx,vue .",
-    "release": "bumpp && npm publish",
-    "start": "esno src/index.ts",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "release": "npm publish"
   },
   "exports": {
     ".": {
@@ -44,7 +39,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.35.3",
+    "@antfu/eslint-config": "^0.38.4",
     "@types/node": "^18.7.18",
     "eslint": "^8.23.1",
     "esno": "^0.16.3",
@@ -52,9 +47,7 @@
     "rimraf": "^4.1.2",
     "simple-git-hooks": "^2.8.1",
     "unbuild": "^0.8.11",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vitest": "^0.29.1"
+    "typescript": "^5.0.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
