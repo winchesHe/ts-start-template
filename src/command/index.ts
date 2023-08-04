@@ -3,8 +3,10 @@ import { join, resolve } from 'path'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import chalk from 'chalk'
+import prettier from 'prettier'
 import { getInquirer, getName } from '../inquirer'
 import { pkgDir } from '../utils'
+import { commonDep, prettierConfig } from '../constants'
 
 const root = process.cwd()
 
@@ -20,7 +22,7 @@ export async function start(options: { name?: string }) {
   )
   console.log()
 
-  let name
+  let name: string
   if (options.name)
     name = options.name
   else
@@ -45,6 +47,28 @@ export async function start(options: { name?: string }) {
   const npmPath = fs.existsSync(npm) ? npm : fg.sync('.npmignore', { absolute: true, unique: true, onlyFiles: true })[0]
   npmPath && fs.moveSync(npmPath, resolve(`${root}/${name}`, '.gitignore'))
 
+  // 处理通用的依赖升级
+  await resolvePkg()
+
   console.log()
   console.log(`Success: 成功写入模版${name}`)
+
+  async function resolvePkg() {
+    const pkg = resolve(`${root}/${name}`, 'package.json')
+    if (!fs.existsSync(pkg))
+      return
+
+    try {
+      const content = JSON.parse(fs.readFileSync(pkg, 'utf-8'))
+      content.devDependencies = {
+        ...(content.devDependencies || {}),
+        ...commonDep,
+      }
+      const transformContent = await prettier.format(JSON.stringify(content), { ...prettierConfig, parser: 'json' })
+      fs.writeFileSync(pkg, transformContent, 'utf-8')
+    }
+    catch (error) {
+      console.error(error)
+    }
+  }
 }
