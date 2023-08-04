@@ -16,10 +16,11 @@
     "build": "tsup-node",
     "lint": "eslint --cache --ext ts,tsx,vue .",
     "prepublishOnly": "npm run build",
-    "release": "npm publish",
     "start": "esno src/bin.ts",
     "test": "ts-start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "changlog": "npx conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
+    "release": "bumpp --execute='npm run changlog' --all"
   },
   "exports": {
     ".": {
