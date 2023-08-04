@@ -1,7 +1,7 @@
 {
   "publisher": "winches",
-  "name": "ImportToRequire",
-  "displayName": "ImportToRequire",
+  "name": "<plugin-name>",
+  "displayName": "<plugin-name>",
   "version": "1.0.0",
   "private": true,
   "description": "exchange selected words",
@@ -23,18 +23,18 @@
     "vscode": "^1.69.0"
   },
   "activationEvents": [
-    "onCommand:importToRequire"
+    "onCommand:<plugin-name>"
   ],
   "contributes": {
     "commands": [
       {
-        "command": "importToRequire",
+        "command": "<plugin-name>",
         "title": "自动转换import 和 require"
       }
     ],
     "keybindings": [
       {
-        "command": "importToRequire",
+        "command": "<plugin-name>",
         "key": "ctrl+alt+R",
         "mac": "cmd+shift+R",
         "when": "editorTextFocus"
@@ -44,7 +44,7 @@
       "editor/context": [
         {
           "when": "editorFocus",
-          "command": "importToRequire",
+          "command": "<plugin-name>",
           "group": "navigation"
         }
       ]
