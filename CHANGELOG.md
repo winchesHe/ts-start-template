@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/winchesHe/ts-start-template/compare/v0.2.2...v0.2.3) (2023-08-04)
+
+
+### Features
+
+* 新增cli模版 ([1bdd5c1](https://github.com/winchesHe/ts-start-template/commit/1bdd5c1f49a08507eef66e6be2afaf243fd051a4))
+
+
+
 ## 0.2.2 (2023-08-04)
 
 
