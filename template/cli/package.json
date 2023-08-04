@@ -1,4 +1,4 @@
- {
+{
   "name": "pkg-name",
   "type": "module",
   "version": "0.0.0",
@@ -7,6 +7,9 @@
   "license": "MIT",
   "keywords": [],
   "sideEffects": false,
+  "bin": {
+    "ts-start": "dist/index.js"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
@@ -50,7 +53,10 @@
     "rimraf": "^4.1.2",
     "simple-git-hooks": "^2.8.1",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "inquirer": "^9.1.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
