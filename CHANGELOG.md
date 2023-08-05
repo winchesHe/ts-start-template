@@ -1,3 +1,7 @@
+## [0.2.7](https://github.com/winchesHe/ts-start-template/compare/v0.2.6...v0.2.7) (2023-08-05)
+
+
+
 ## [0.2.6](https://github.com/winchesHe/ts-start-template/compare/v0.2.5...v0.2.6) (2023-08-05)
 
 
