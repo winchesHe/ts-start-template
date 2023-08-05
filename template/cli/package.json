@@ -48,7 +48,7 @@
     "chalk": "^5.2.0",
     "commander": "^10.0.0",
     "inquirer": "^9.1.4",
-    "@winches/utils": "^0.0.4"
+    "@winches/utils": "^0.0.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.0",
