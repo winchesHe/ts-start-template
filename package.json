@@ -20,7 +20,7 @@
     "test": "ts-start",
     "typecheck": "tsc --noEmit",
     "changlog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
-    "release": "bumpp --execute=\"nr changlog\" --all"
+    "release": "bumpp --execute=\"nr changlog\" --all && npm publish"
   },
   "exports": {
     ".": {
