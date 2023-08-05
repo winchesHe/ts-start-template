@@ -2,7 +2,7 @@
 import { printColorLogs } from '@winches/utils'
 
 const defaultBanner = 'all are created with Typescript'
-const gradientBanner = printColorLogs(defaultBanner, 'rgb(66, 211, 146)')
+const gradientBanner = printColorLogs(defaultBanner)
 
 export async function start(options: { name?: string }) {
   console.log()
