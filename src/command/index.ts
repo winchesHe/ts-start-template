@@ -64,7 +64,7 @@ export async function start(options: { name?: string }) {
         ...(content.devDependencies || {}),
         ...commonDep,
       }
-      const transformContent = await prettier.format(JSON.stringify(content), { ...prettierConfig, parser: 'json' })
+      const transformContent = await prettier.format(JSON.stringify(content), { ...prettierConfig, parser: 'json-stringify' })
       fs.writeFileSync(pkg, transformContent, 'utf-8')
     }
     catch (error) {
