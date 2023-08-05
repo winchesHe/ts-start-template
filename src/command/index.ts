@@ -4,6 +4,7 @@ import fs from 'fs-extra'
 import fg from 'fast-glob'
 import chalk from 'chalk'
 import prettier from 'prettier'
+import { printSuccessLogs } from '@winches/utils'
 import { getInquirer, getName } from '../inquirer'
 import { pkgDir } from '../utils'
 import { commonDep, prettierConfig } from '../constants'
@@ -50,8 +51,7 @@ export async function start(options: { name?: string }) {
   // 处理通用的依赖升级
   await resolvePkg()
 
-  console.log()
-  console.log(`Success: 成功写入模版${name}`)
+  printSuccessLogs(`Success: 成功写入模版${name}`)
 
   async function resolvePkg() {
     const pkg = resolve(`${root}/${name}`, 'package.json')
