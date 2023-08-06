@@ -10,7 +10,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
-    "build": "tsup --minify",
+    "build": "tsup-node",
     "start": "tsx src/index.ts",
     "lint": "eslint --cache --ext ts,tsx,vue .",
     "changlog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
