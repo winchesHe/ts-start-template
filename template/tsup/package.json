@@ -11,7 +11,7 @@
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
     "build": "tsup --minify",
-    "start": "esno src/index.ts",
+    "start": "tsx src/index.ts",
     "lint": "eslint --cache --ext ts,tsx,vue .",
     "changlog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
     "release": "bumpp --execute='npm run changlog' --all && npm publish"
