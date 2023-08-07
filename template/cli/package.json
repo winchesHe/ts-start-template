@@ -8,7 +8,7 @@
   "keywords": [],
   "sideEffects": false,
   "bin": {
-    "ts-start": "dist/index.js"
+    "ts-start": "dist/cli.js"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
