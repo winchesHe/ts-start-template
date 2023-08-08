@@ -13,8 +13,8 @@
     "build": "tsup-node",
     "start": "tsx src/index.ts",
     "lint": "eslint --cache --ext ts,tsx,vue .",
-    "changlog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
-    "release": "bumpp --execute='npm run changlog' --all && npm publish"
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": "bumpp --execute=\"nr changelog\" --all && npm publish"
   },
   "exports": {
     ".": {
