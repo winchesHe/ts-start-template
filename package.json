@@ -19,7 +19,7 @@
     "start": "esno src/bin.ts",
     "test": "ts-start",
     "typecheck": "tsc --noEmit",
-    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
     "release": "bumpp --execute=\"nr changelog\" --all && npm publish"
   },
   "exports": {
