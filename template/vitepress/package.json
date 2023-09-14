@@ -8,6 +8,7 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
+    "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
     "release": "npm publish",
     "dev": "vitepress dev docs",

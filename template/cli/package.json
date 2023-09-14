@@ -11,6 +11,7 @@
     "ts-start": "dist/cli.js"
   },
   "scripts": {
+    "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
     "build": "tsup-node",

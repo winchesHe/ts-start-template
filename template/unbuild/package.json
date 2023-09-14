@@ -8,6 +8,7 @@
   "keywords": [],
   "sideEffects": false,
   "scripts": {
+    "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
     "build": "unbuild",
     "dev": "unbuild --stub",
