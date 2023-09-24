@@ -8,14 +8,14 @@
   "keywords": [],
   "sideEffects": false,
   "bin": {
-    "ts-start": "dist/cli.js"
+    "pkg-bin": "dist/bin.js"
   },
   "scripts": {
     "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
     "dev": "tsup --watch",
     "build": "tsup-node",
-    "start": "tsx src/index.ts",
+    "start": "tsx src/cli.ts",
     "lint": "eslint --cache --ext ts,tsx,vue .",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
     "release": "bumpp --execute=\"nr changelog\" --all && npm publish"

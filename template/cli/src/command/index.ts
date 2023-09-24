@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import { printColorLogs } from '@winches/utils'
+import type { Options } from '../types'
 
 const defaultBanner = 'all are created with Typescript'
 const gradientBanner = printColorLogs(defaultBanner)
 
-export async function start(options: { name?: string }) {
+export async function start(options: Options) {
   console.log()
   // 如果标准输出处于交互式终端模式，并且终端支持至少 24 位
   console.log(
