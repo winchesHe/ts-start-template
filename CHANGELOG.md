@@ -1,3 +1,12 @@
+## [0.2.18](https://github.com/winchesHe/ts-start-template/compare/v0.2.16...v0.2.18) (2023-10-22)
+
+
+### Features
+
+* update 跟新依赖版本 ([81f4ede](https://github.com/winchesHe/ts-start-template/commit/81f4eded4838855661adddff96ee6f3a6b08c56f))
+
+
+
 ## [0.2.16](https://github.com/winchesHe/ts-start-template/compare/v0.2.15...v0.2.16) (2023-09-24)
 
 
