@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import { join, resolve } from 'node:path'
+import { copyFile } from 'node:fs'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import chalk from 'chalk'
@@ -50,6 +51,23 @@ export async function start(options: { name?: string }) {
 
   // 处理通用的依赖升级
   await resolvePkg()
+
+  // 复制通用文件
+  const files = fg.sync('example/**', { cwd: pkgDir, absolute: true, onlyFiles: true })
+  const commonConfigFiles = files.length ? files : fg.sync('example/**', { cwd: root, absolute: true, onlyFiles: true })
+
+  for (const file of commonConfigFiles) {
+    let transformName = file.replace(/.*\/example\//, '')
+
+    if (transformName.includes('eslintrc')) {
+      transformName = transformName.replace('eslintrc', '.eslintrc')
+    }
+
+    copyFile(file, resolve(`${root}/${name}`, transformName), (err) => {
+      if (err)
+        console.error(err)
+    })
+  }
 
   printSuccessLogs(`Success: 成功写入模版${name}`)
 

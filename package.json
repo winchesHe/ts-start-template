@@ -44,7 +44,8 @@
     "dist",
     "template",
     ".gitignore",
-    ".npmrc"
+    ".npmrc",
+    "example"
   ],
   "publishConfig": {
     "access": "public",
