@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { join, resolve } from 'path'
+import { join, resolve } from 'node:path'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import chalk from 'chalk'
