@@ -1,3 +1,15 @@
+## [0.2.19](https://github.com/winchesHe/ts-start-template/compare/v0.2.18...v0.2.19) (2024-03-28)
+
+
+### Features
+
+* add conventional-changelog-cli dev dependencies ([ffbf6db](https://github.com/winchesHe/ts-start-template/commit/ffbf6db3af4752e3555e5ed1a6e2da2c6765ee52))
+* add eslint copy ([c3f4083](https://github.com/winchesHe/ts-start-template/commit/c3f4083775298779d40e67bcfb38f21b4690e57e))
+* add miss bumpp ([c4128dc](https://github.com/winchesHe/ts-start-template/commit/c4128dcf2b424e4e37995247cd863db337b72896))
+* remove eslint redundant ([eaf4599](https://github.com/winchesHe/ts-start-template/commit/eaf45999f04d2c42693231481b8a90106319d86e))
+
+
+
 ## [0.2.18](https://github.com/winchesHe/ts-start-template/compare/v0.2.16...v0.2.18) (2023-10-22)
 
 
