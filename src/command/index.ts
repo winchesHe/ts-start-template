@@ -45,9 +45,9 @@ export async function start(options: { name?: string }) {
   })
 
   // 重命名npm禁止上传的gitignore
-  const npm = resolve(`${root}/${name}`, '.npmignore')
-  const npmPath = fs.existsSync(npm) ? npm : fg.sync('.npmignore', { absolute: true, unique: true, onlyFiles: true })[0]
-  npmPath && fs.moveSync(npmPath, resolve(`${root}/${name}`, '.gitignore'))
+  // const npm = resolve(`${root}/${name}`, '.npmignore')
+  // const npmPath = fs.existsSync(npm) ? npm : fg.sync('.npmignore', { absolute: true, unique: true, onlyFiles: true })[0]
+  // npmPath && fs.moveSync(npmPath, resolve(`${root}/${name}`, '.gitignore'))
 
   // 处理通用的依赖升级
   await resolvePkg()
@@ -61,6 +61,9 @@ export async function start(options: { name?: string }) {
 
     if (transformName.includes('eslintrc')) {
       transformName = transformName.replace('eslintrc', '.eslintrc')
+    }
+    if (transformName.includes('gitignore')) {
+      transformName = transformName.replace('gitignore', '.gitignore')
     }
 
     copyFile(file, resolve(`${root}/${name}`, transformName), (err) => {
