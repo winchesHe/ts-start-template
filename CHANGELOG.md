@@ -1,3 +1,12 @@
+## [0.2.21](https://github.com/winchesHe/ts-start-template/compare/v0.2.20...v0.2.21) (2024-05-10)
+
+
+### Features
+
+* add gitignore ([ed6c708](https://github.com/winchesHe/ts-start-template/commit/ed6c7083a68f6fce6fe272408edc1f96895c6eed))
+
+
+
 ## [0.2.20](https://github.com/winchesHe/ts-start-template/compare/v0.2.19...v0.2.20) (2024-05-10)
 
 
