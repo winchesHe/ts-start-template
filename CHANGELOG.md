@@ -1,3 +1,12 @@
+## [0.2.20](https://github.com/winchesHe/ts-start-template/compare/v0.2.19...v0.2.20) (2024-05-10)
+
+
+### Features
+
+* add release ([e8c0a63](https://github.com/winchesHe/ts-start-template/commit/e8c0a636b476d5c1672d021a87b67d01454d695e))
+
+
+
 ## [0.2.19](https://github.com/winchesHe/ts-start-template/compare/v0.2.18...v0.2.19) (2024-03-28)
 
 
