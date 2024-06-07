@@ -1,3 +1,12 @@
+## [0.2.22](https://github.com/winchesHe/ts-start-template/compare/v0.2.21...v0.2.22) (2024-06-07)
+
+
+### Features
+
+* update tsup version ([fcf0b80](https://github.com/winchesHe/ts-start-template/commit/fcf0b80d658c7375ecfb60a7314070577839b1cb))
+
+
+
 ## [0.2.21](https://github.com/winchesHe/ts-start-template/compare/v0.2.20...v0.2.21) (2024-05-10)
 
 
