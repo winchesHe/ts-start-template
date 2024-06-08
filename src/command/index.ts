@@ -57,6 +57,9 @@ export async function start(options: { name?: string }) {
   const commonConfigFiles = files.length ? files : fg.sync('example/**', { cwd: root, absolute: true, onlyFiles: true })
 
   for (const file of commonConfigFiles) {
+    if (selectTem === 'react-components-library') {
+      continue
+    }
     let transformName = file.replace(/.*\/example\//, '')
 
     if (transformName.includes('eslintrc')) {

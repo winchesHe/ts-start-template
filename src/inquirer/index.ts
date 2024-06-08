@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import inquirer from 'inquirer'
@@ -13,7 +13,7 @@ function getChoices() {
   return fs.readdirSync(templateDir).filter(file => !excludeList.includes(file))
 }
 
-export const getName = async (): Promise<string> => {
+export async function getName(): Promise<string> {
   const strName = {
     type: 'input',
     name: 'projectName',
@@ -23,7 +23,7 @@ export const getName = async (): Promise<string> => {
   return (await inquirer.prompt([strName])).projectName
 }
 
-export const getInquirer = async (): Promise<['tsup' | 'unbuild']> => {
+export async function getInquirer(): Promise<['tsup' | 'unbuild' | 'react-components-library']> {
   const pathName = {
     type: 'checkbox',
     name: 'template',
