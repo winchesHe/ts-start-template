@@ -1,3 +1,12 @@
+## [0.2.25](https://github.com/winchesHe/ts-start-template/compare/v0.2.24...v0.2.25) (2024-06-13)
+
+
+### Features
+
+* update tsx ([8c84745](https://github.com/winchesHe/ts-start-template/commit/8c84745f7555eff79e4611e774715e4214699552))
+
+
+
 ## [0.2.24](https://github.com/winchesHe/ts-start-template/compare/v0.2.23...v0.2.24) (2024-06-08)
 
 
