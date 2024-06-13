@@ -1,3 +1,12 @@
+## [0.2.26](https://github.com/winchesHe/ts-start-template/compare/v0.2.25...v0.2.26) (2024-06-13)
+
+
+### Features
+
+* add eslint import ([40e9bbd](https://github.com/winchesHe/ts-start-template/commit/40e9bbd8955d5b31c248a089c99f502a2662bd48))
+
+
+
 ## [0.2.25](https://github.com/winchesHe/ts-start-template/compare/v0.2.24...v0.2.25) (2024-06-13)
 
 
