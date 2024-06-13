@@ -9,6 +9,7 @@
     "tsup": "^8.1.0",
     "typescript": "^5.1.6",
     "bumpp": "^9.4.0",
-    "conventional-changelog-cli": "^4.1.0"
+    "conventional-changelog-cli": "^4.1.0",
+    "eslint-plugin-unused-imports": "^4.0.0"
   }
 }
