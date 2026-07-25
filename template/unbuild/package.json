@@ -1,4 +1,4 @@
- {
+{
   "name": "pkg-name",
   "type": "module",
   "version": "0.0.0",
@@ -12,26 +12,19 @@
     "prepublishOnly": "npm run build",
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "release": "npm publish"
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "release": "bumpp --all && npm publish"
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
@@ -40,20 +33,22 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.4",
-    "@types/node": "^18.7.18",
-    "eslint": "^8.23.1",
-    "esno": "^0.16.3",
-    "lint-staged": "^13.1.2",
-    "simple-git-hooks": "^2.8.1",
-    "unbuild": "^0.8.11",
-    "typescript": "^5.0.4"
+    "@antfu/eslint-config": "^4.13.2",
+    "@types/node": "^22.15.21",
+    "bumpp": "^12.0.0",
+    "eslint": "^9.27.0",
+    "tsx": "^4.19.4",
+    "lint-staged": "^15.5.1",
+    "simple-git-hooks": "^2.12.1",
+    "unbuild": "^3.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix"
     ]
   }

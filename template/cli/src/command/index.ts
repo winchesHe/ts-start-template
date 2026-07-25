@@ -1,17 +1,10 @@
-/* eslint-disable no-console */
-import { printColorLogs } from '@winches/utils'
+import pc from 'picocolors'
 import type { Options } from '../types'
 
-const defaultBanner = 'all are created with Typescript'
-const gradientBanner = printColorLogs(defaultBanner)
+const banner = 'all are created with Typescript'
 
 export async function start(options: Options) {
   console.log()
-  // 如果标准输出处于交互式终端模式，并且终端支持至少 24 位
-  console.log(
-    (process.stdout.isTTY && process.stdout.getColorDepth() > 8)
-      ? gradientBanner
-      : defaultBanner,
-  )
+  console.log(pc.green(banner))
   console.log()
 }
