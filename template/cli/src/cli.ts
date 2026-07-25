@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
-import pkg from '../package.json'
+import { version } from '../package.json'
 import { start } from './command/index'
 
 const program = new Command()
-program.version(pkg.version, '-v --version', '显示当前版本号')
+program.version(version, '-v --version', '显示当前版本号')
 
 program
   .description('ts cli 模版目录')

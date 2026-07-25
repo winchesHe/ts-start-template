@@ -1,11 +1,8 @@
-import inquirer from 'inquirer'
+import { input } from '@inquirer/prompts'
 
-export const getName = async (): Promise<string> => {
-  const strName = {
-    type: 'input',
-    name: 'projectName',
-    message: '请填写项目名: ',
+export async function getName(): Promise<string> {
+  return input({
+    message: '请填写项目名:',
     default: 'project-name',
-  }
-  return (await inquirer.prompt([strName])).projectName
+  })
 }
