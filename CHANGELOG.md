@@ -1,3 +1,13 @@
+# [0.3.0](https://github.com/winchesHe/ts-start-template/compare/v0.2.26...v0.3.0) (2026-07-25)
+
+
+### Features
+
+* add agent-ts-lib template ([#4](https://github.com/winchesHe/ts-start-template/issues/4)) ([24c72d4](https://github.com/winchesHe/ts-start-template/commit/24c72d48b853e1d6f9bf66d1c16ddc2f419f3599))
+* upgrade tsup/unbuild/cli templates to modern toolchain ([#3](https://github.com/winchesHe/ts-start-template/issues/3)) ([6d63d18](https://github.com/winchesHe/ts-start-template/commit/6d63d183abd67e8f209b6df34eb415229bd79e0f))
+
+
+
 ## [0.2.26](https://github.com/winchesHe/ts-start-template/compare/v0.2.25...v0.2.26) (2024-06-13)
 
 
