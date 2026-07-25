@@ -1,0 +1,59 @@
+{
+  "name": "pkg-name",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "author": "winches",
+  "license": "MIT",
+  "keywords": [],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "npm run build",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "check": "tsc --noEmit && vitest run && eslint .",
+    "release": "bumpp --all && npm publish"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
+    "@types/node": "^22.15.21",
+    "bumpp": "^12.0.0",
+    "eslint": "^9.27.0",
+    "tsx": "^4.19.4",
+    "lint-staged": "^15.5.1",
+    "simple-git-hooks": "^2.12.1",
+    "tsdown": "^0.22.14",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
